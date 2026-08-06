@@ -42,11 +42,13 @@ These profiles are tuned for the **exact hardware, nozzle diameter, and slicer v
 | Panchroma CoPE | 1.75 mm |
 | Panchroma Matte | 1.75 mm |
 | Panchroma PLA | 1.75 mm |
-| Panchroma Celestial | 1.75 mm |
+| Panchroma PLA Celestial | 1.75 mm |
 | Polymaker HT-PLA | 1.75 mm |
 | Polymaker PETG | 1.75 mm |
 
-**Fiberon filaments** are part of the Polymaker product family and are **planned for future testing**. They are not yet covered by any profile in this repository — entries will be added here as calibration is completed.
+Each of the 6 filaments above has a completed profile for **both** printers (Core One+ 0.4mm and MK4S 0.6mm HF) — 12 profiles total.
+
+**Fiberon filaments**, and **Polymaker PLA Pro**, are part of the Polymaker product family and are **planned for future testing**. They are not yet covered by any profile in this repository — entries will be added here as calibration is completed.
 
 ---
 
@@ -78,20 +80,23 @@ These profiles are built on top of PrusaSlicer's **built-in system presets** for
 
 ## Repository Contents
 
-Filament profiles are organized hierarchically — first by printer, then by nozzle, then by filament:
+Filament profiles are organized hierarchically — first by printer, then by nozzle, then by filament. Supporting evidence (test-print G-code and photos) is kept in a single `evidence/` folder per printer/nozzle combination, organized by filament:
 
 ```
 /<Printer>/<Nozzle>/<Filament>/
+/<Printer>/<Nozzle>/evidence/<Filament>/
 ```
 
 For example:
 
 ```
-/Core-One/0.4mm/PolyLite-PETG/
-/MK4S/0.6mm-HF/PolyLite-PETG/
+/Core-One/0.4mm/Polymaker-PETG/
+/Core-One/0.4mm/evidence/Polymaker-PETG/
+/MK4S/0.6mm-HF/Polymaker-PETG/
+/MK4S/0.6mm-HF/evidence/Polymaker-PETG/
 ```
 
-Each filament folder contains the calibrated `.ini` profile for that specific printer/nozzle/filament combination.
+Each filament folder contains the calibrated `.ini` profile and a changelog for that specific printer/nozzle/filament combination. The corresponding `evidence/<Filament>/` folder holds the G-code and photo used to validate that profile version.
 
 ---
 
@@ -118,7 +123,7 @@ To be considered, a submission **must** include all of the following:
 4. **A clear photo** of the finished calibration/test print corresponding to the submitted G-code.
 5. **A short summary** of what was changed from the base profile and why (e.g. "reduced hotend temp 5°C to reduce stringing on batch X").
 
-Please open a pull request (GitHub) or a comment with linked files (Printables) to submit. In order to maintain a set standard and consistancy, all submissions will be tested and validated based on filament availability before being added to the listing.
+Submissions missing any of the above will not be accepted. Please open a pull request (GitHub) or a comment with linked files (Printables) to submit. All submissions will be tested and validated based on filament availability.
 
 ---
 
@@ -134,4 +139,4 @@ By submitting a contribution under [Community Contributions](#community-contribu
 
 ## Attribution
 
-Maintained by raporter1992. Not affiliated with Polymaker or Prusa Research.
+Maintained by [YOUR NAME / HANDLE]. Not affiliated with Polymaker or Prusa Research.
