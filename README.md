@@ -126,7 +126,9 @@ Please open a pull request (GitHub) or a comment with linked files (Printables) 
 
 ## Printables Link
 
+https://www.printables.com/model/1801353-calibrated-filament-profiles-polymaker-panchroma-f
 
+---
 
 ## License
 
