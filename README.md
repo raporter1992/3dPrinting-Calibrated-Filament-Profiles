@@ -78,29 +78,31 @@ These profiles are built on top of PrusaSlicer's **built-in system presets** for
 
 ## Repository Contents
 
-Filament profiles are organized hierarchically — first by printer, then by nozzle, then by filament:
+Filament profiles are organized hierarchically — first by printer, then by nozzle, then by filament. Supporting evidence (test-print G-code and photos) is kept in a single `evidence/` folder per printer/nozzle combination, organized by filament:
 
 ```
 /<Printer>/<Nozzle>/<Filament>/
+/<Printer>/<Nozzle>/evidence/<Filament>/
 ```
 
 For example:
 
 ```
-/Core-One/0.4mm/PolyLite-PETG/
-/MK4S/0.6mm-HF/PolyLite-PETG/
+/Core-One/0.4mm/Polymaker-PETG/
+/Core-One/0.4mm/evidence/Polymaker-PETG/
+/MK4S/0.6mm-HF/Polymaker-PETG/
+/MK4S/0.6mm-HF/evidence/Polymaker-PETG/
 ```
 
-Each filament folder contains the calibrated `.ini` profile for that specific printer/nozzle/filament combination.
+Each filament folder contains the calibrated `.ini` profile and a changelog for that specific printer/nozzle/filament combination. The corresponding `evidence/<Filament>/` folder holds the G-code and photo used to validate that profile version.
 
 ---
 
 ## Versioning
 
-Versioning is tracked **per filament profile**, not per printer or print-settings preset. Each profile follows a `vX.Y` scheme:
+Versioning is tracked **per filament profile**, not per printer or print-settings preset. Each profile follows a `vX` scheme:
 
-- **X** — increments on a material or formulation change requiring re-calibration (e.g. a filament reformulation, or a new color/line with materially different behavior)
-- **Y** — increments on a refinement to an existing calibration (temperature, flow, retraction, etc.)
+- **X** — increments on a refinement to an existing calibration (temperature, flow, retraction, etc.)
 
 The current version is noted in each profile's filename and tracked in a changelog alongside it.
 
